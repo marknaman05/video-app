@@ -8,9 +8,9 @@ import {
   } from '@stream-io/video-react-sdk';
 
   
-const MeetingSetup = () => {
+const MeetingSetup = ({setIsSetupComplete} : {setIsSetupComplete : (arg0: boolean) => void}) => {
 
-    const [isMicCamEnabled, setIsMicCamEnabled] = React.useState(true)
+    
 
     const call = useCall();
 
@@ -18,8 +18,10 @@ const MeetingSetup = () => {
         throw new Error('useCall must be used within a StremCall Component')
     }
 
+    const [isMicCamEnabled, setIsMicCamEnabled] = React.useState(false)
+
     useEffect(() => {
-        if(!isMicCamEnabled){
+        if(isMicCamEnabled){
             call?.camera.disable();
             call?.microphone.disable();
         }
@@ -31,7 +33,7 @@ const MeetingSetup = () => {
     } , [isMicCamEnabled, call?.camera , call?.microphone]);
   return ( 
     <div className='flex h-screen w-full flex-col items-center justify-center gap-3 text-white'>
-        <h1 className='text-2xl font-bold'>Setup</h1>
+        <h1 className='text-center text-2xl font-bold'>Setup</h1>
         <VideoPreview />
 
         <div className='flex h-16 items-center justify-center gap-3'>
@@ -42,12 +44,14 @@ const MeetingSetup = () => {
                     onChange={(e) => setIsMicCamEnabled(e.target.checked)}
 
                 />
-                Join with Mic and Camera On
+                Join with Mic and Camera Off
             </label>
         <DeviceSettings />
         </div>
         <Button className="rounded-md bg-green-500 px-4 py-2.5" onClick={() => {
             call?.join();
+
+            setIsSetupComplete(true);
         }}>
             Join Meeting
         </Button>
