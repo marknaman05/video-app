@@ -12,6 +12,8 @@ import { link } from 'fs';
 import { useToast } from "@/components/ui/use-toast"
 import { Textarea } from "@/components/ui/textarea"
 import ReactDatePicker from 'react-datepicker';
+import { Input } from './ui/input';
+
 
 
 
@@ -122,7 +124,7 @@ const MeetingTypeList = () => {
                       }}/>
                   </div>
                   <div className="flex w-full flex-col gap-2.5">
-                    <label className='text-base text-normal leading-[22px] text-sky-2'>
+                    <label className='text-base font-normal leading-[22px] text-sky-2'>
                         Select Date and Time
                     </label>
                     <ReactDatePicker
@@ -151,6 +153,7 @@ const MeetingTypeList = () => {
                     image="/icons/checked.svg"
                     buttonIcon="/icons/copy.svg"
                     buttonText="Copy Meeting Link"
+                    className="text-center"
                 /> 
             ) 
 
@@ -163,8 +166,24 @@ const MeetingTypeList = () => {
             buttonText="Start Meeting"
             handleClick={createMeeting}
         />
+        <MeetingModal 
+            isOpen={meetingState === 'isJoiningMeeting'}
+            onClose={() => setMeetingState(undefined)}
+            title="Start an Instant Meeting"
+            className="text-center"
+            buttonText="Join Meeting"
+            handleClick={() => {
+                router.push(values.link)
+            }}
+        >
+        <Input 
+            placeholder="Enter meeting Link"
+            className="border-none bg-dark-3 focus-visible:ring-0 focus-visible:ring-offset-0" 
+            onChange={(e) => setValues({...values, link: e.target.value})}
+        />
+        </MeetingModal>
     </section>
   )
 }
 
-export default MeetingTypeList
+export default MeetingTypeList;
