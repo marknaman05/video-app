@@ -21,6 +21,8 @@ type CallLayoutType = 'grid' | 'speaker-left' | 'speaker-right'
 const MeetingRoom = () => {
   const searchParams = useSearchParams();
   const isPersonalRoom = !!searchParams.get('personal') // to get a true boolean value
+
+  const router = useRouter();
   
   const[layout , setLayout] = useState<CallLayoutType>('speaker-left')
   const [showParticipants, setShowParticipants] = useState(false)
@@ -40,10 +42,7 @@ const MeetingRoom = () => {
       return <SpeakerLayout participantsBarPosition="right" />
 
     }
-  };
-
-  const router = useRouter();
-    
+  }; 
 
   return (    
     <section className='relative h-screen w-full overflow-hidden pt-4 text-white'>
