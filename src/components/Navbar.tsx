@@ -17,6 +17,7 @@ const Navbar = () => {
         />
         <p className='text-[26px] font-extrabold text-white max-sm:hidden'>FaceTime</p>
       </Link>
+      <p className='gap-5 font-light text-white max-sm:hidden px-4'>Made with ♥️ by <Link href="https://github.com/marknaman05" className='font-bold'>Naman Markhedkar</Link></p>
 
       <div className="flex-between gap-5">
         <SignedIn>
