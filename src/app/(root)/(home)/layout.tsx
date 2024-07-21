@@ -1,6 +1,13 @@
 import React, { Children, ReactNode } from 'react'
 import Navbar from '@/components/Navbar'
 import Sidebar from '@/components/Sidebar'
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "FaceTime Video Chat",
+  description: "Video Chat Application",
+  icons: '/icons/logo.svg'
+};
 
 const HomeLayout = ({children} : {children: ReactNode}) => {
   return (
