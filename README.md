@@ -58,7 +58,7 @@ You can then explore the app by creating a meeting , scheduling or Joining an ex
 
 ![image](https://github.com/user-attachments/assets/38fb3cd0-39b8-4a14-8e53-f243eb7d9f01)
 
-GetStream as a lot of features inside a meeting room .
+GetStream provides a lot of features inside a meeting room .
 
 ![image](https://github.com/user-attachments/assets/ce369e3a-027a-4161-b449-1b06455d4510)
 
