@@ -1,3 +1,20 @@
+
+# FaceTime - Video Chat Application
+
+An All-in-one video calling application which allows users to do online meetings/video calling effeciently. It allows user to create an Instant Meeting , schedule a new meeting for future , keep record for upcoming/previously done meetings, as well as allows user to record meetings.
+
+Hosted On: https://video-app-rosy-seven.vercel.app/
+
+
+## Technologies Used
+
+ - [Clerk Documentation](https://clerk.com/)
+ - [getStream Video Docs](https://getstream.io/video/docs/)
+ - [JS Mastery Figma files](https://www.figma.com/design/FSbYf8vm3wKN9cztXyt0sp/Zoom-Clone?node-id=0-1&t=zGyveUk0SwVXYYoC-0)
+ - [Vercel](https://vercel.com/docs/storage/vercel-postgres/using-an-orm)
+ - [ShadcnUI Library](https://ui.shadcn.com/)
+ - [NextJS](https://nextjs.org/)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
@@ -28,6 +45,23 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+
+## Usage/Examples
+
+Sign In using any OAuth agent of the following:
+
+
+![image](https://github.com/user-attachments/assets/529174e5-2bc9-4c95-836f-556f2fc5523c)
+
+You can then explore the app by creating a meeting , scheduling or Joining an existing one.
+
+![image](https://github.com/user-attachments/assets/38fb3cd0-39b8-4a14-8e53-f243eb7d9f01)
+
+GetStream as a lot of features inside a meeting room .
+
+![image](https://github.com/user-attachments/assets/ce369e3a-027a-4161-b449-1b06455d4510)
+
 
 ## Deploy on Vercel
 
